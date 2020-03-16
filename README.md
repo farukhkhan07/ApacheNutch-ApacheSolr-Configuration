@@ -26,3 +26,18 @@ rich document handling.
 to communicate with the application live.
 * .NetCore: .NetCore language is used for the communication and the development of the
 middleware as well as api response fetching.
+
+
+# Prerequisites
+As of the usage of different technologies for different kinds of solutions. Apache Nutch has some
+prerequisites to be worked easily and successfully. These are as follows.
+* Unix environment, or Windows-Cygwin environment.
+* Java Runtime/Development Environment (JDK 1.8 / Java 8)
+* (Source build only) Apache Ant: https://ant.apache.org/
+As discussed above, Apache Solr was used on Azure VM provided by bitnami. The link to the
+particular Azure VM is given below.
+* https://bitnami.com/stack/solr/cloud/azure
+Or you can just create your own from your Azure Portal.
+* Go to "Create Resource"
+* Search For "Apache Solr Certied by Bitnami"
+* Install
