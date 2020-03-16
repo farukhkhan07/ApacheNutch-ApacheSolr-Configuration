@@ -46,9 +46,8 @@ Or you can just create your own from your Azure Portal.
 # Problem Statement
 The Problem Statement is explained below with the each step.
 Below are some key steps of the problem statement:
-* Crawl 30000 pages from the internet.
+* Crawl 1000's of pages from the internet.
 * Save the crawled data in a database.
 * Index the crawled data for usage with application.
-* Develop a middleware to communicate between .netcore application i.e. DDH and Crawled
-data.
-* Fetch the data and show the response together with Internal products in DDH.
+* Develop a middleware to communicate between .netcore application and crawled data.
+* Fetch the data and show the response.
