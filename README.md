@@ -87,4 +87,21 @@ The key steps are as follows.
 
 * Specify Gora Properties. Go to apachenutch2.2.3/conf Folder and open nutch-site.xml.
 
-
+* Copy and paster the following piece of code in nutch-site.xml le.
+```
+<property>
+<name>storage.data.store.class</name>
+<value>org.apache.gora.hbase.store.HBaseStore</value>
+<description>Default class for storing data</description>
+</property>
+```
+* Make sure HBasegora properties are also available in ivy.xml le. Located in apachenutch2.2.3/ivy/ivy.xml file.
+```
+<!-- Uncomment this to use HBase as Gora backend. -->
+<dependency org="org.apache.gora" name="gora-hbase" rev="0.2" conf="*-
+>default" />
+```
+* Go to apachenutch2.2.3/conf and open the le gora.properties.
+* Copy and paste the following line of code in it.
+gora.datastore.default=org.apache.gora.hbase.store.HBaseStore
+* Now go to apachenutch2.2.3 Folder
