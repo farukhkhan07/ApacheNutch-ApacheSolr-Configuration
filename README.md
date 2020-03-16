@@ -55,7 +55,7 @@ Below are some key steps of the problem statement:
 
 
 # Installing and Configuring Apache Nutch
-listings Apache Nutch Installation and conguration In this section, the key steps of Apache
+listings Apache Nutch Installation and configuration In this section, the key steps of Apache
 Nutch up and running are explained. How to successfully run Apache Nutch and crawled the data
 from the sites mentioned by the developer is also explained.
 Some of the dependencies are as follows.
@@ -104,4 +104,18 @@ The key steps are as follows.
 * Go to apachenutch2.2.3/conf and open the file gora.properties.
 * Copy and paste the following line of code in it.
 gora.datastore.default=org.apache.gora.hbase.store.HBaseStore
-* Now go to apachenutch2.2.3 Folder
+* Now go to apachenutch2.2.3 Folder and open your terminal in the particular directory. Run
+Command "ant runtime".
+* Runing the above command with create the respective directory named as "runtime" in the
+apachenutch2.2.3 Folder. The structure of apachenutch2.2.3 will look like the following image
+below.
+
+
+- Apache-nutch-2.2.3
+  -  build
+  -  conf
+  -  docs
+  -  ivy
+  -  lib
+  -  runtime
+  -  src
