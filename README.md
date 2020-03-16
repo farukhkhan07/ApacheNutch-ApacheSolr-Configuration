@@ -39,5 +39,5 @@ particular Azure VM is given below.
 * https://bitnami.com/stack/solr/cloud/azure
 Or you can just create your own from your Azure Portal.
 * Go to "Create Resource"
-* Search For "Apache Solr Certied by Bitnami"
+* Search For "Apache Solr Certified by Bitnami"
 * Install
