@@ -136,7 +136,8 @@ about all the logs please refer to apachenutch2.2.3/runtime/local/logs/hadoop.lo
 # Verifying Your Apache Nutch Installation
 * Go to apachenutch2.2.3/runtime/local folder and run the following command. bin/nutch
 * If everything is successful, you shall see the following output.
-```Usage: nutch COMMAND
+```
+Usage: nutch COMMAND
 ..
 ..
 ..
