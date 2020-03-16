@@ -119,3 +119,14 @@ below.
   -  lib
   -  runtime
   -  src
+
+
+Lets Go to HBase directory and check HBase is working ne.
+* Go to Hbase0.94 directory and run the following command.
+```./bin/hbase shell```
+* If everything goes well. You may see the following output.
+```HBase Shell; enter 'help<RETURN>' for list of supported commands. Type "exit<RETURN>" ```
+```to leave the HBase Shell Version: 0.90.4, r1001068, Fri Sep 24 13:55:42 PDT 2010```
+
+* This Completes your installation of Apache Nutch and integrating HBase. For more details
+about all the logs please refer to apachenutch2.2.3/runtime/local/logs/hadoop.log.
