@@ -179,3 +179,53 @@ the file and close it.
 # Note: Run this command after deployment of Apache Solr.
 
 After every step you will see the successfull output. Otherwise check hadoop.log file mentioned above.
+
+
+# Deployment Of Apache Solr on Azure VM
+As discussed above, we are using Apache Solr Certified by Bitnami on Azure Services. After the installation and successfully deployment of the server. Following steps should be taken for the configuration of Apache Solr and indexing.
+
+* Go to Folder Solr/bin and start solr by the following command. ```./solr start```
+* Create the core, to put the crawled data on it, to be indexed. ```./solr create -c nutch```
+* Stop the solr after creating the core.
+```./solr stop```
+* Now go to apachenutch2.2.3/conf and copy the file schema.xml.
+* Paste the file in the following directory of apachesolr i.e. solr/server/nutch/conf.
+* Remove the file managed-schema.
+* Open schema.xml and remove all the occurances of ```enablePositionIncrements="true"```
+from every ```filter class="solr.StopFilterFactory".```
+* open solrconfig.xml file located in solr/server/nutch/conf.
+* Locate the section ```AddSchemaFieldsProcessorFactory``` and comment out the 1st elements like following.
+
+```
+<processor class="solr.AddSchemaFieldsUpdateProcessorFactory">
+<str name="defaultFieldType">strings</str>
+<!--
+<lst name="typeMapping">
+<str name="valueClass">java.lang.Boolean</str>
+<str name="fieldType">booleans</str>
+</lst>
+<lst name="typeMapping">
+<str name="valueClass">java.util.Date</str>
+<str name="fieldType">tdates</str>
+</lst>
+<lst name="typeMapping">
+<str name="valueClass">java.lang.Long</str>
+<str name="valueClass">java.lang.Integer</str>
+<str name="fieldType">tlongs</str>
+</lst>
+<lst name="typeMapping">
+<str name="valueClass">java.lang.Number</str>
+<str name="fieldType">tdoubles</str>
+</lst> -->
+</processor>
+```
+* Run the last command that was noted in chapter 4. And deploy the crawled data on azure service.
+* Go to apachenutch2.2.3/runtime/local folder and run the following command. 
+```bin/nutch solrindex http://azureipaddress:8983/solr/nutch -all```
+* And that's it. Go to the address where your apache solr is deployed and query the data.
+
+
+* Finally, Go to ```azureipaddress:8983/solr/nutch``` and check your search responses while providing any relative keywords.
+
+
+
