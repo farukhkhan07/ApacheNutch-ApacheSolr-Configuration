@@ -141,8 +141,9 @@ Usage: nutch COMMAND
 ..
 ..
 ..
+
+Most commands will print help when invoked w/o parameters.
 ```
-* Most commands will print help when invoked w/o parameters.
 * If the permission is denied run the following command chmod +x bin/nutch
 * You may also see an error that can occur at any step stating that "JAVA Home is
 not set".
@@ -177,5 +178,4 @@ the file and close it.
 * ```bin/nutch solrindex http://azureipaddress:8983/solr/nutch -all``` 
 # Note: Run this command after deployment of Apache Solr.
 
-After every step you will see the successfull output. Otherwise check hadoop.log le mentioned
-above.
+After every step you will see the successfull output. Otherwise check hadoop.log file mentioned above.
