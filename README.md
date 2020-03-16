@@ -1,0 +1,1 @@
+# ApacheNutch-ApacheSolr-Configuration
