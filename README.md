@@ -51,3 +51,40 @@ Below are some key steps of the problem statement:
 * Index the crawled data for usage with application.
 * Develop a middleware to communicate between .netcore application and crawled data.
 * Fetch the data and show the response.
+
+
+
+# Installing and Configuring Apache Nutch
+listings Apache Nutch Installation and conguration In this section, the key steps of Apache
+Nutch up and running are explained. How to successfully run Apache Nutch and crawled the data
+from the sites mentioned by the developer is also explained.
+Some of the dependencies are as follows.
+* Apache Nutch 2.2.3
+* HBase 0.94.0
+* Ant
+* JDK 8
+The key steps are as follows.
+* Install Apache Nutch 2.2.3 from http://nutch.apache.org/downloads.html.
+* Extract Apache Nutch in the folder of your choice forexample (Nutch/apachenutch2.2.3).
+* Install and extract HBase from http://archive.apache.org/dist/hbase/hbase-0.90.4/.
+* Now in Nutch Folder we have HBase0.94 and apachenutch2.2.3.
+* Go to HBase0.94/conf folder and open hbase-site.xml file.
+* Copy and paste the following code in hbase-site.xml
+
+```
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+<name>hbase.rootdir</name>
+<value><Your path></value>
+<! You need to create one directory and assign a path up to that directory. That directory will be <property>
+<name>hbase.zookeeper.property.dataDir</name>
+<value><Your path></value>
+<! You need to create one directory and assign a path up to that directory. That directory will be </property>
+</configuration>
+```
+
+* Specify Gora Properties. Go to apachenutch2.2.3/conf Folder and open nutch-site.xml.
+
+
