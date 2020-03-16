@@ -87,7 +87,7 @@ The key steps are as follows.
 
 * Specify Gora Properties. Go to apachenutch2.2.3/conf Folder and open nutch-site.xml.
 
-* Copy and paster the following piece of code in nutch-site.xml le.
+* Copy and paster the following piece of code in nutch-site.xml file.
 ```
 <property>
 <name>storage.data.store.class</name>
@@ -121,7 +121,7 @@ below.
   -  src
 
 
-Lets Go to HBase directory and check HBase is working ne.
+Lets Go to HBase directory and check HBase is working fine.
 * Go to Hbase0.94 directory and run the following command.
 ```./bin/hbase shell```
 * If everything goes well. You may see the following output.
