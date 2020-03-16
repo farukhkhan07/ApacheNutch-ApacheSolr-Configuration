@@ -130,3 +130,51 @@ Lets Go to HBase directory and check HBase is working fine.
 
 * This Completes your installation of Apache Nutch and integrating HBase. For more details
 about all the logs please refer to apachenutch2.2.3/runtime/local/logs/hadoop.log.
+
+
+
+# Verifying Your Apache Nutch Installation
+* Go to apachenutch2.2.3/runtime/local folder and run the following command. bin/nutch
+* If everything is successful, you shall see the following output.
+```Usage: nutch COMMAND
+..
+..
+..
+```
+* Most commands will print help when invoked w/o parameters.
+* If the permission is denied run the following command chmod +x bin/nutch
+* You may also see an error that can occur at any step stating that "JAVA Home is
+not set".
+* Set JAVA HOME with the following commands.
+```sudo nano /.bashrc.```
+* In the file put the following piece of line.
+  ```export JAVA HOME=Your Java path```
+  
+ 
+ # Crawling Your First Website/ No. Of Websites
+* Go to apachenutch2.2.3/runtime/local/conf Folder and open the file nutch-site.xml.
+* Copy the following piece of code in it.
+```
+<configuration>
+<property>
+<name>http.agent.name</name>
+<value>My Nutch Spider</value>
+</property>
+</configuration>
+```
+* Now go to apachenutch2.2.3/runtime/local Folder and make another Folder. Name the Folder as "urls".
+* In Folder urls make a file and named it as "seed.txt".
+* In seed.txt file provide the urls that you want to crawl. Forexample https://www.apple.com/. Save
+the file and close it.
+* Now go back to Folder apachenutch2.2.3/runtime/local and run the following commands.
+* ``` bin/nutch inject urls```
+* ```bin/nutch generate -topN 100.``` 
+# (Note: You can mention your own number while generating to tell the apache nutch that How many linked urls should it generate from the given sites.)
+* ```bin/nutch fetch -all.```
+* ```bin/nutch parse -all```
+* ```bin/nutch updatedb -all```
+* ```bin/nutch solrindex http://azureipaddress:8983/solr/nutch -all``` 
+# Note: Run this command after deployment of Apache Solr.
+
+After every step you will see the successfull output. Otherwise check hadoop.log le mentioned
+above.
