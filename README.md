@@ -1,3 +1,5 @@
+Author: Farrukh Ahmed Khan
+
 # ApacheNutch-ApacheSolr-Configuration
 
 # Overview
